@@ -7,7 +7,21 @@ html
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
-    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+    nav.navbar.fixed-top.navbar-expand-md.custom-navbar
+      .container
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarMain', aria-controls='navbarMain', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        a.navbar-brand(href='/') Savorly
+        #navbarMain.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/users/login') Login
+            li.nav-item
+              a.nav-link(href='/users/signup') Signup
+    .container
+      block content
+      footer
+        .row
+          .col-12
+            small &copy; Eleonora Blazhko 2024
     script(src='/javascripts/bootstrap.min.js')

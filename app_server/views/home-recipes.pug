@@ -1,0 +1,38 @@
+extends layout
+block content
+  .row.banner
+    .col-12
+      h1 Savorly
+        small &nbsp;Find your recipe!
+
+  .row
+    .col-12
+      #products.row.view-group
+        if recipes && recipes.length > 0
+          each recipe in recipes
+            .item.col-xs-12.col-md-6.col-lg-4
+              .thumbnail.card 
+                .caption.card-body
+                  h4.group.card-title.inner.list-group-item-heading
+                    = recipe.name
+                  p.group.inner.list-group-item-text
+                    = recipe.description
+                  ul.ingredients-list
+                    li
+                      strong ⏱️ Cooking Time:
+                      |  #{recipe.cookingTime}
+                    li
+                      strong 🍽️ Servings:
+                      |  #{recipe.servings}
+                    li
+                      strong 📋 Ingredients:
+                      ul
+                        each ingredient in recipe.ingredients
+                          li= ingredient
+                    li
+                      strong ✅ Instructions:
+                      ol
+                        each instruction in recipe.instructions
+                          li= instruction
+        else
+          p No recipes available.

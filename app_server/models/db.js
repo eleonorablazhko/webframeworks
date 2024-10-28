@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const dbURI =
-  "mongodb+srv://eb_user:xQ7bnxitfu4@savorly.m68dh.mongodb.net/savorly?retryWrites=true&w=majority";
+const dbURI = "";
 try {
   mongoose
     .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })

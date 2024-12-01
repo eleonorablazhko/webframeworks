@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-block">
+    <h4>
+      <a [routerLink]="['/recipe', recipe._id]">{{ recipe.name }}</a>
+      <span class="badge badge-pill badge-default float-right">{{
+        recipe.cookingTime
+      }}</span>
+    </h4>
+
+    <p class="description">{{ recipe.description }}</p>
+
+    <div class="recipe-details">
+      <div class="row">
+        <div class="col-12">
+          <ul class="ingredients-list">
+            <li>
+              <strong>⏱️ Cooking Time: </strong>
+              {{ recipe.cookingTime }}
+            </li>
+            <li>
+              <strong>🍽️ Servings: </strong>
+              {{ recipe.servings }}
+            </li>
+            <li>
+              <strong>📋 Ingredients:</strong>
+              <ul>
+                <li *ngFor="let ingredient of recipe.ingredients">
+                  {{ ingredient }}
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>✅ Instructions:</strong>
+              <ol>
+                <li *ngFor="let instruction of recipe.instructions">
+                  {{ instruction }}
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

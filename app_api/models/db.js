@@ -15,5 +15,5 @@ try {
 } catch (e) {
   console.log("could not connect");
 }
-require("./user");
+
 require("./recipe");

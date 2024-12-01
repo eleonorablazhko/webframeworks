@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "../../../webframeworks"
+	},
+	{
+		"path": "../../app_api"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {}
+}

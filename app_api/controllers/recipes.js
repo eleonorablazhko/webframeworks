@@ -24,7 +24,28 @@ const recipesListByDistance = async function (req, res) {
     });
   }
 };
+const recipeById = async function (req, res) {
+  try {
+    const recipeId = req.params.id;
+    const recipe = await Recipe.findById(recipeId);
+
+    if (!recipe) {
+      return res.status(404).json({
+        status: "error",
+        message: "Recipe not found",
+      });
+    }
+
+    res.status(200).json(recipe);
+  } catch (err) {
+    res.status(500).json({
+      status: "error",
+      message: "Error fetching recipe",
+    });
+  }
+};
 
 module.exports = {
   recipesListByDistance,
+  recipeById,
 };

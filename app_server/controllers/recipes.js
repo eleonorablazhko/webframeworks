@@ -29,12 +29,12 @@ const login = (req, res) => {
   res.render("login", { title: "Login to Savorly" });
 };
 
-const signup = (req, res) => {
-  res.render("signup", { title: "Sign Up for Savorly" });
+const register = (req, res) => {
+  res.render("register", { title: "Register for Savorly" });
 };
 
 module.exports = {
   displayRecipes,
   login,
-  signup,
+  register,
 };

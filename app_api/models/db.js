@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const passportLocalMongoose = require("passport-local-mongoose");
 const dbURI =
   "mongodb+srv://eb_user:xQ7bnxitfu4@savorly.m68dh.mongodb.net/savorly?retryWrites=true&w=majority";
 try {
@@ -17,3 +18,4 @@ try {
 }
 
 require("./recipe");
+require("./account");

@@ -14,10 +14,16 @@ html
         a.navbar-brand(href='/') Savorly
         #navbarMain.collapse.navbar-collapse
           ul.navbar-nav.mr-auto
-            li.nav-item
-              a.nav-link(href='/login') Login
-            li.nav-item
-              a.nav-link(href='/signup') Signup
+            if !user
+              li.nav-item
+                a.nav-link(href='/login') Login
+              li.nav-item
+                a.nav-link(href='/register') Register
+            else
+              li.nav-item
+                a.nav-link(href='/logout') Logout
+              li.nav-item
+                span.nav-link Welcome, #{user.username}
     .container
       block content
       footer

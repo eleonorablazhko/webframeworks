@@ -5,8 +5,8 @@ block content
     .col-md-6.offset-md-3
       .card.shadow
         .card-body
-          h2.card-title.text-center.mb-4 Login to Savorly
-          form(role='form', action="/login", method="post")
+          h2.card-title.text-center.mb-4 Create Account
+          form(role='form', action="/register", method="post")
             .mb-3
               label.form-label(for="username") Username
               input#username.form-control(type='text', name="username", placeholder='Enter Username', required)
@@ -14,8 +14,5 @@ block content
               label.form-label(for="password") Password
               input#password.form-control(type='password', name="password", placeholder='Enter Password', required)
             .d-grid.gap-2
-              button.btn.btn-primary.btn-lg(type='submit') Login
+              button.btn.btn-primary.btn-lg(type='submit') Create Account
               a.btn.btn-outline-primary.btn-lg(href='/') Cancel
-          .mt-3.text-center
-            p Don't have an account? 
-              a(href="/register") Sign up

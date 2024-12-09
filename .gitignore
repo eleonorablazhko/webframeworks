@@ -60,6 +60,7 @@ typings/
 # next.js build output
 .next
 
-.mydomain.key
-.mydomain.csr
+# SSL certificates (sensitive)
+mydomain.key
+mydomain.csr
 
